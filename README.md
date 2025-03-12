@@ -20,7 +20,7 @@ O **OrderApp** é uma aplicação desenvolvida em **.NET 8** que utiliza **Rabbi
 
 ### 1️⃣ Clonar o Repositório
 ```sh
-git clone <repository-url>
+git clone https://github.com/phenriq-dev/OrderApp.git
 cd OrderApp
 ```
 
