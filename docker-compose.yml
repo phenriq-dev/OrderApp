@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  orderapp:
+    build:
+      context: .
+      dockerfile: OrderApp/Dockerfile
+    container_name: orderapp
+    ports:
+      - "8080:8080"
+      - "8081:8081"
+    depends_on:
+      - rabbitmq
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+
+  rabbitmq:
+    image: "rabbitmq:3-management"
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
